@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>三栏布局</title>
+		<style type="text/css">
+			body,html{margin: 0;}
+			.box{width: 96%;margin: 10px;height: 200px;border: 1px solid silver;position: relative;}
+			.left,.right{height: 100%;width: 200px;background: mediumvioletred;line-height: 200px;text-align: center;}
+			.main{background: darkgoldenrod;height: 100%;line-height: 200px;text-align: center;}
+			.box1 .left,.box1 .right{position: absolute;top: 0;}
+			.box1 .left{left: 0;}
+			.box1 .right{right: 0;}
+			.box1 .main{margin:0 210px;}
+			
+			.box2 .left{float: left;}
+			.box2 .right{float: right;}
+			.box2 .main{margin:0 210px;}
+			
+			.box3 .left{float: left;margin-left: -100%;}
+			.box3 .right{float: left;margin-left: -200px;}
+			.box3 .main{float: left;width: 100%;}
+			.box3 .main .main-con{height: 100%; margin: 0 210px;background: indianred;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box box1">
+			<div class="left">left</div>
+			<div class="main">main</div>
+			<div class="right">right</div>
+		</div>
+		<div class="box box2">
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="main">main</div>
+		</div>
+		<div class="box box3">
+			<div class="main">
+				<div class="main-con">main-con</div>
+			</div>
+			<div class="left">left</div>
+			<div class="right">right</div>	
+		</div>
+	</body>
+</html>

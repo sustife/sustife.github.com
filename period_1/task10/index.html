@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			html,body{margin: 0;padding: 0;min-width: 640px;}
+			div{padding: 20px;}
+			.continer{display: flex;flex-flow: row wrap;justify-content: space-between; align-items: center; padding: 20px; border: 1px solid silver;min-width: 640px;}
+			.item{width: 150px;border: 1px solid #f00;order: 1;}
+			.item1{height: 120px;}
+			.item2{height: 100px;}
+			.item3{height: 40px;}
+			.item4{height: 200px;border: 1px solid #00f;}
+			@media only screen and (max-width: 640px) {
+				.continer{justify-content: space-between; align-items: flex-start;}
+				.item4{order: -1;}
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="continer">
+			<div class="item item1"></div>
+			<div class="item item2"></div>
+			<div class="item item3"></div>
+			<div class="item item4"></div>
+		</div>
+	</body>
+</html>

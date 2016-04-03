@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>居中布局</title>
+		<style type="text/css">
+		html,body{margin: 0;height: 100%;}
+		body{width: 100%;height: 100%;}
+		.wrapper{width: 100%;height: 100%;position: relative;}
+		.box{position: absolute;top: 50%;left: 50%;margin: -100px 0 0 -200px; width: 400px;min-height: 200px;background: #ccc;overflow: hidden;}
+		.box:before,.box:after{content: '';position: absolute;width: 100px;height: 100px;border-radius: 50%;background: #fc0;}
+		.box:before{top: -50px;left:-50px}
+		.box:after{bottom: -50px;right:-50px}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="box">
+				<p></p>
+			</div>
+		</div>
+	</body>
+</html>

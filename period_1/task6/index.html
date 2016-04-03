@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<title>ife.badu.com</title>
+		<style type="text/css">
+			html,body{background: #eeeeee;height: 100%;font-family: "微软雅黑";}
+			.wrapperTotal{width: 980px;margin: 0 auto;background: #FFFFFF;}
+			.wrapper{width: 893px;margin: 0 auto;}
+			.clearfix:after{content: '';display: block;height: 0;visibility: hidden;overflow: hidden;clear: both;}
+			.header{height: 61px;border-bottom: 2px solid #938e8c;}
+			.header h1{float: left;position: relative; width: 100px;height: 100%;padding-left: 6px; background: #d45d5c;color: #FFFFFF;}
+			.header h1 strong{position: absolute;bottom: 0;width: 100%;font-size: 12px; line-height: 21px;}
+			.header h4{float: right;width: 70px; height: 100%;position: relative;}
+			.header h4 small{position: absolute; bottom:0;width: 100%; font-size:12px;line-height: 21px;text-align: right;color: #d45d5c;}
+			.section1{margin-top: 34px;height: 302px;}
+			.section1 .banner{float: left;width: 640px;height:100%;background: url(img/banner.png) no-repeat 0 0;background-size: cover;}
+			.section1 .banner ul{width: 100%;height: 100%;}
+			.section1 .banner li{height: 100%;width: 190px;}
+			.section1 .banner li:first-of-type{float: left;background: rgba(43,83,65,0.5);}
+			.section1 .banner li:last-of-type{float: right; background: rgba(228,183,182,0.5);}
+			.section1 .headInfo{float: right;position: relative; width: 205px;height:100%; border-top: 2px solid #cc8091;}
+			.section1 .headInfo h2{margin-top:8px;}
+			.section1 .headInfo h2 strong{display:inline-block; font-size: 16px;line-height: 18px; margin-top: 2px;font-weight: normal;border-bottom:2px solid #333333; ;}
+			.section1 .headInfo h2 strong:first-of-type{margin-bottom: 4px;}
+			.section1 .headInfo h2 strong:first-letter{font-size: 24px;}
+			.section1 .headInfo p{font-size: 12px;font-style: italic;color: #676767;line-height: 12px;}
+			.section1 .headInfo .num_strong{display: inline-block; margin-top: 34px;font-size: 96px;line-height: 116px;font-style: italic;color: #75b86b;}
+			.section1 .headInfo .bot_info{position: absolute;bottom: 0;width: 100%; height: 48px;}
+			.section1 .headInfo .bot_info big{float: left;width: 80px; padding-left: 9px; font-size: 48px;line-height: 48px;color: #cc8091;}
+			.section1 .headInfo .small{float:left;width: 116px; padding-top: 18px;}
+			.section1 .headInfo .small small{font-size: 12px;line-height: 12px;}
+			.section1 .headInfo .small small:first-of-type{line-height: 16px;font-size: 16px;color: #cc8091;}
+			.section2{margin-top: 34px;}
+			.section2 .text_item{float: left;margin-right: 25px;height: 215px;}
+			.section2 .text_item h2{font-size: 18px;line-height: 32px;text-decoration: underline;font-weight: bolder;}
+			.section2 .text_item p{font-size: 12px;line-height: 16px;}
+			.section2 .text_item1{width: 230px;}
+			.section2 .text_item1 h2{color:#418c59;}
+			.section2 .text_item2{width: 208px;}
+			.section2 .text_item2 h2{color:#d2994f;}
+			.section2 .text_item3{width: 152px;}
+			.section2 .text_item3 h2{color:#cc7680;}
+			.section2 .text_item3 p{margin-bottom: 6px;}
+			.section2 .text_item3 h3{font-size: 12px;line-height: 21px;}
+			.section2 .text_item3 i{font-style: italic;color: #dc807f;}
+			.section3{margin-top: 34px;height: 612px;}
+			.section3 .mian_section_left{float: left;width: 414px;height: 100%;}
+			.section3 .mian_section_right{float: right;width: 460px;height: 100%;}
+			.section3 .mian_section_left h2{margin-bottom: 23px;border-bottom: 2px solid #11456b;padding-bottom: 10px;font-size: 30px;line-height: 40px; font-weight: 600;color: #11456b;font-family: "黑体";}
+			.section3 .mian_section_left strong{font-size: 54px;font-style: italic;color: #f5e327;font-weight: bold;}
+			.section3 .mian_section_left p{ font-size: 12px;line-height: 16px;font-family: "宋体";color: #a5a6a6;text-indent: 2em;}
+			.section3 .mian_section_left p:first-of-type:first-letter{float: left;margin: 28px 0px; font-size: 76px;color: #f5e327;font-family: "微软雅黑";}
+			.section3 .mian_section_left p:first-of-type{text-indent: 0;}
+			.section3 .mian_section_left img{float: right;margin:16px 2px 16px 16px ;width: 166px;height: 288px;}
+			.section3 .mian_section_right .imgbox{position: relative;width: 100%;}
+			.section3 .mian_section_right .imgbox img{width: 100%;}
+			.section3 .mian_section_right .imgbox h2{position: absolute;bottom: 0;left: 0;padding-left: 52px; width: calc(100% - 52px);height: 60px;font-size: 25px;color: #FFFFFF; line-height: 60px; background: rgba(0,0,0,0.5);}
+			.section3 .mian_section_right .imgbox h2 i{font-style: italic;font-size: 12px;color: #6faa68;padding-left: 6px;}
+			.section3 .mian_section_right .imgbox h2:before{content: '';position: absolute;left: 28px; width: 3px;height: 44px;top: 50%;margin-top: -22px; background: #72b16a;}
+			.section3 .mian_section_right .mainInfo1{margin-top: 30px;background: #eeedd6;}
+			.section3 .mian_section_right .mainInfo1 ul{padding: 20px 28px;} 
+			.section3 .mian_section_right .mainInfo1 ul li{position: relative; height: 40px;padding-left: 20px;font-family: "宋体"; font-size: 15px;line-height: 40px; background: url(img/listStyle.png) no-repeat 6px 14px/11px 11px;overflow: hidden;}
+			.section3 .mian_section_right .mainInfo1 ul i{position: absolute;right:0;padding: 0 4px; font-size: 12px;white-space: nowrap; font-style: italic;background:#eeedd6 ;}
+			.section3 .mian_section_right .mainInfo2{height: 162px;}
+			.section3 .mian_section_right .mainInfo2 .infoLeft{position: relative; float: left;height: 100%; width: 260px;background: #d45d5c;color: #FFFFFF;}
+			.section3 .mian_section_right .infoLeft h4{position: absolute; font-size: 86px;line-height: 86px;top: 50%;left: 14px; margin-top: -43px;}
+			.section3 .mian_section_right .infoLeft h4:after{content: '';position: absolute;height: 100%;width: 2px;background: #FFFFFF;top:0;right: -8px;}
+			.section3 .mian_section_right .infoLeft h5{position: absolute;left: 90px; top: 45px;font-style: italic; font-size: 15px;line-height: 24px;}
+			.section3 .mian_section_right .infoLeft p{position: absolute;left: 90px;top: 94px; font-size: 12px;line-height: 12px;}
+			.section3 .mian_section_right .infoRight{float: right;width: 198px;height: 100%;}
+			.section3 .mian_section_right .infoRight p{text-indent: 2em; position: relative; padding: 16px;font-size: 12px;line-height: 16px;}
+			.section3 .mian_section_right .infoRight p:before{position:absolute;top: 16px;left: -45px; content: '“';font-size: 60px;color: #d45d5c;}
+			.section3 .mian_section_right .infoRight p:after{position:absolute;bottom: -10px;right: 0; content:  '”';font-size: 60px;color: #d45d5c;}
+			.footer{position: relative; border-top:1px solid #938e8c;margin-top: 34px;height: 59px;}
+			.footer b{position: absolute;right: 0;font-size: 12px;line-height: 14px;color: #d45d5c;}
+		</style>
+	</head>
+	<body>
+		<div class="wrapperTotal">
+			<div class="wrapper header">
+				<h1>
+					<strong>ife.badu.com</strong>
+				</h1>
+				<h4>
+					<small>2016.03</small>
+				</h4>
+			</div>
+			<div class="wrapper section1 clearfix">
+				<div class="banner">
+					<ul class="clearfix">
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="headInfo">
+					<h2><strong>ABOUT</strong><br /><strong>TECHNILOGE</strong></h2>
+					<p>About technologe about technologe about technologe</p>
+					<strong class="num_strong">700</strong>
+					<div class="bot_info">
+						<big>3.2</big>
+						<div class="small">
+							<small>css</small>
+							<small>csscsscsscsssscss</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper section2 clearfix">
+				<div class="text_item text_item1">
+					<h2>What</h2>
+					<p>百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端</p>
+				</div>
+				<div class="text_item text_item2">
+					<h2>When</h2>
+					<p>百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端</p>
+				</div>
+				<div class="text_item text_item3">
+					<h2>How</h2>
+					<p>百度前端百度前端百度</p>
+					<p>度前端百度前端</p>
+					<p>度前端百端</p>
+					<h3>What--------<i>40%</i></h3>
+					<h3>What--------<i>30%</i></h3>
+					<h3>What--------<i>30%</i></h3>
+				</div>
+			</div>
+			<div class="wrapper section3 clearfix">
+				<div class="mian_section_left">
+					<h2><strong>THE</strong> TECHNOLOGE<br />OF FRONT<br/>前端技术领域</h2>
+					<p>前端百度前端百度前端百度前端百度前端百端百度前端百度前端百度前度前端百度前端百度前端百度前端百度前度前端百度前端百度度前端百度前端百度前端百度度前端端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前<img src="img/demo.png" alt="demo" />端百度端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度前端百度</p>
+					<p>端百度前端百度端百度前度前端百度前端百度前端百度前端百百度前端百度前端百度端百度前端百度端百度前端百度前端百度前度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度端百度前端百度前端百度前度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度端百度前端百度前端百度前度前端百度前端百度前端百度前端百度前端百度前端百度前端百度端百度前端百度端百度前端百度前端百度前度前端百度前端百度前端百度前端百度前端百度前端百度前端百度</p>
+					<p>端百度前端百度前端百度前端百度前端百前端百度前百度前端百度前端百度前端百度前端百度前度前端百</p>
+				</div>
+				<div class="mian_section_right">
+					<div class="imgbox">
+						<h2>前端技术<i>前端技术前端技术</i></h2>
+						<img src="img/demo2.png"/>
+					</div>
+					<div class="mainInfo1">
+						<ul>
+							<li>前端百度前度前端百度前端....................<i>前端</i></li>
+							<li>前端百度前.................................<i>前端</i></li>
+							<li>前端百度前度度前端.....................<i>前端</i></li>
+						</ul>
+						<div class="mainInfo2">
+							<div class="infoLeft">
+								<h4>0</h4>
+								<h5>ONE TWO <br/>THREE FORE FIVE</h5>
+								<p>hello world hello world <br/></br?>hello world</p>
+							</div>
+							<div class="infoRight">
+								<p>world hello worldhello world hello worldhello world hello worldhello world hello worldhello world hello worldhello world  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper footer">
+				<b>ife.baidu.com</b>
+			</div>
+		</div>
+	</body>
+</html>
